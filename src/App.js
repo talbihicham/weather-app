@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import { Button, TextField } from '@material-ui/core';
 
 
 const api = {
@@ -7,7 +8,7 @@ const api = {
 }
 
 function App() {
-  
+
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
 
@@ -45,13 +46,15 @@ function App() {
     <div>
       <main>
         <div>
-          <input
+          {/* <input
             type="text"
             placeholder="serach ..."
             onChange={e => setQuery(e.target.value)}
             value={query}
             onKeyPress={search}
-          />
+          /> */}
+           <TextField id="outlined-basic" onKeyPress={search} value={query} onChange={e => setQuery(e.target.value)} placeholder="serach ..." label="Location" variant="outlined" />
+
         </div>
         {(typeof weather.main != "undefined") ? (
           <div>
