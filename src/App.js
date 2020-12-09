@@ -7,7 +7,7 @@ const api = {
 }
 
 function App() {
-
+//ana hna assat
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
 
